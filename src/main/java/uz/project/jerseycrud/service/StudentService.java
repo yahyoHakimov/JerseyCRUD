@@ -19,7 +19,6 @@ public class StudentService{
         return studentRepository.findAllByOrderByIdAsc();
     }
 
-    //student
     public Student addStudent(StudentDto studentDto) {
         Student student = new Student();
         if (!studentRepository.existsByNameEqualsIgnoreCase(studentDto.getName())) {
